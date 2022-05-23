@@ -1,0 +1,9 @@
+RewriteBase / 
+RewriteEngine On
+RewriteCond %{REQUEST-FILENAME} !-d
+RewriteCond %{REQUEST-FILENAME} .html -f 
+RewriteRule ^(.*)$ $1.html
+
+RewriteCond %{REQUEST-FILENAME} !-d
+RewriteCond %{REQUEST-FILENAME} .php -f 
+RewriteRule ^(.*)$ $1.php
